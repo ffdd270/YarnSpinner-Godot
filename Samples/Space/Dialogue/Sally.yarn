@@ -1,7 +1,7 @@
 ﻿title: Sally
 tags: 
 colorID: 0
-position: 524,111
+position: 304,-211
 ---
 <<declare $times_talked_sally_before_ship = 0>>
 <<declare $player_avoided_ship = $times_talked_sally_before_ship > 3>>
@@ -17,6 +17,7 @@ position: 524,111
 ===
 
 title: Sally_Give_Quest
+position: 327,27
 ---
 <<set $times_talked_sally_before_ship = $times_talked_sally_before_ship +1 >>
 // smart variable example 
@@ -64,7 +65,7 @@ Sally: Bye. #line:60c282
 title: Sally_Sorry
 tags: 
 colorID: 0
-position: 827,439
+position: 672,254
 ---
 <<declare $apologized_to_sally to false as bool>>
 Sally: Yeah. Don't do it again. #line:d7df49

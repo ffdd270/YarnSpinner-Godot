@@ -1,8 +1,9 @@
 title: Ship
 tags: 
 colorID: 0
-position: 721,130
+position: 817,-64
 ---
+
 <<once>>
     Ship: Hey, friend.  #line:5837f2 #firstline
     Player: Hi, Ship. #line:ship09
@@ -40,6 +41,7 @@ position: 721,130
 
 title: ShipChat
 when: always
+position: 1,2
 ---
 <<setsprite ShipFace happy>>
 Ship: Remember that alien made of crystals that we met? That was cool. 
@@ -47,6 +49,7 @@ Ship: Remember that alien made of crystals that we met? That was cool.
 
 title: ShipChat
 when: always
+position: 260,-2
 ---
 Ship: Remind me again, are you a shapeshifting species?
 Ship: Oh that's right, you're just a human. How, um, exciting. 
@@ -55,6 +58,7 @@ Ship: Oh that's right, you're just a human. How, um, exciting.
 
 title: ShipChat
 when: always
+position: 302,180
 ---
 <<setsprite ShipFace happy>>
 Ship: I was built in the Gamma Quadrant. It's still my favorite quadrant.
@@ -63,6 +67,7 @@ Ship: I was built in the Gamma Quadrant. It's still my favorite quadrant.
  
 title: ShipChat
 when: $apologized_to_sally
+position: 296,330
 ---
 <<setsprite ShipFace neutral>>
 Ship: Don't feel too bad about the console. She probably didn't mean the thing about the flaying.
@@ -72,6 +77,8 @@ Ship: I mean she's only done that twice ever. And only once to a crew member.
 
 title: ShipChat
 when: always
+color: red
+position: -24,432
 ---
 <<setsprite ShipFace happy>>
 Ship: Did I ever tell you about the psychic giant cyclops of Beltridion Blue? 
@@ -80,6 +87,7 @@ Ship: Easily in the top ten cyclops planets I've ever been to.
 ===
 
 title: Cyclops
+position: 4,210
 ---
 Ship: Of course as a machine, they were unable to read my mind. 
 Ship: But they could certainly read Sally's, and boy did they make her embarrassed.
