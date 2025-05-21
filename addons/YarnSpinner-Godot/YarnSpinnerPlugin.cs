@@ -94,12 +94,12 @@ public partial class YarnSpinnerPlugin : EditorPlugin
     [ModuleInitializer]
     public static void Initialize()
     {
-        System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(System.Reflection.Assembly.GetExecutingAssembly()).Unloading += alc =>
-        {
-            YarnProjectEditorUtility.ClearJSONCache();
-        };
+#if TOOLS
+        AssemblyLoadContext.GetLoadContext(Assembly.GetExecutingAssembly())
+            .Unloading += alc => { YarnProjectEditorUtility.ClearJSONCache(); };
+#endif
     }
-    
+
     public override void _EnterTree()
     {
 #if !GODOT4_2_OR_GREATER
@@ -175,7 +175,7 @@ public partial class YarnSpinnerPlugin : EditorPlugin
     /// <param name="id"></param>
     public void OnPopupIDPressed(long id)
     {
-        if (IDToToolsMenuItem.TryGetValue((int) id, out var menuItem))
+        if (IDToToolsMenuItem.TryGetValue((int)id, out var menuItem))
         {
             menuItem.Handler();
         }
